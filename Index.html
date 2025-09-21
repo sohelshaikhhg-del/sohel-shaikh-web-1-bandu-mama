@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bandu Mama Naisargik Sheti — Sustainable Agriculture</title>
+  <meta name="description" content="Bandu Mama Naisargik Sheti — Organic farm producing fresh vegetables, herbs and sustainable agricultural products." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--accent:#2f9e44;--dark:#0f1724;--muted:#6b7280}
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial}
+    body{color:var(--dark);background:linear-gradient(180deg,#fbfefb 0%, #f7fdf7 100%)}
+    a{color:inherit;text-decoration:none}
+    header{display:flex;justify-content:space-between;align-items:center;padding:18px 28px;background:rgba(0, 255, 0, 0.47);backdrop-filter:blur(6px);position:sticky;top:0;z-index:40;border-bottom:1px solid #e6efe6}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:52px;height:52px;border-radius:8px;background:linear-gradient(135deg,var(--accent),#86efac);display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:20px}
+    nav a{margin-left:18px;color:var(--dark);font-weight:600}
+    .hero{display:grid;grid-template-columns:1fr;gap:24px;padding:64px 28px;align-items:center}
+    .hero-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 460px;gap:32px;align-items:center}
+    .eyebrow{color:var(--muted);font-weight:600}
+    h1{margin:8px 0;font-size:36px;line-height:1.05}
+    p.lead{color:var(--muted);margin:0 0 18px}
+    .cta{display:flex;gap:12px}
+    .btn{padding:12px 18px;border-radius:10px;border:0;font-weight:700;cursor:pointer}
+    .btn-primary{background:var(--accent);color:white}
+    .btn-outline{background:white;border:1px solid #d1e7d1}
+    .card{background:white;border-radius:14px;padding:18px;box-shadow:0 6px 20px rgba(15,23,36,0.06)}
+    .products-grid {display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;}
+    .product-card {background: white; border: 1px solid #ddd; border-radius: 8px; padding: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);}
+    .farm-photo{width:100%;height:320px;border-radius:12px;object-fit:cover}
+    .features{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:28px 0}
+    .feature{background:linear-gradient(180deg,#ffffff,#fbfff9);padding:16px;border-radius:10px;border:1px solid #f0f6f0}
+    .grid-products{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+    footer{padding:28px;background:#0f1724;color:white;margin-top:36px}
+    .contact-form input,.contact-form textarea{width:100%;padding:10px;border-radius:8px;border:1px solid #e6efe6;margin-bottom:10px}
+    .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+    @media (max-width:900px){.hero-grid{grid-template-columns:1fr}.features{grid-template-columns:repeat(2,1fr)}.gallery{grid-template-columns:repeat(2,1fr)}}
+    @media (max-width:520px){.features{grid-template-columns:1fr}.gallery{grid-template-columns:1fr}}
+
+    .nav-toggle {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: rgba(255,255,255,0.95);
+    position: absolute;
+    top: 70px;
+    right: 28px;
+    border-radius: 8px;
+    box-shadow: 0 6px 20px rgba(15,23,36,0.1);
+    padding: 12px;
+    gap: 12px;
+  }
+  .nav-links.show {
+    display: flex;
+  }
+  .nav-toggle {
+    display: block;
+  }
+}
+
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 20px;
+  right: 20px;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #25D366;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: transform 0.3s;
+}
+
+.whatsapp-float img {
+  width: 35px;
+  height: 35px;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <div class="logo"><img class="logo" src="/websitephoto/company logo.jpeg" alt=""></div>
+      <div>
+        <div style="font-weight:700">Bandu Mama</div>
+        <div style="font-size:12px;color:var(--muted)">Naisargik Sheti</div>
+      </div>
+    </div>
+    <!-- <nav>
+      <a href="#about">About</a>
+      <a href="#products">Products</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+    </nav> -->
+    <nav>
+  <div class="nav-toggle" id="nav-toggle">
+    &#9776; <!-- Hamburger icon -->
+  </div>
+  <div class="nav-links" id="nav-links">
+    <a href="#about">About</a>
+    <a href="#products">Products</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+  </div>
+   </nav>
+
+  </header>
+
+  <main class="hero">
+    <section class="hero-grid">
+      <div>
+        <div class="eyebrow">Organic • Sustainable • Fertilizers • Bio-Liquid Pesticides • Growth Promoters • Micronutrients</div>
+        <h1>Bandu Mama Naisargik Sheti & Organic Agriculture <br><span style="color:var(--accent)">Fresh from our fields to your table</span></h1>
+        <p class="lead">We practise natural, chemical-free farming, growing seasonal vegetables, herbs and millets. Supplying local markets and households with nutrient-rich produce.</p>
+        <div class="cta">
+          <a class="btn btn-primary" href="#contact">Order Now</a>
+          <a class="btn btn-outline" href="#products">Our Products</a>
+        </div>
+
+        <div style="margin-top:22px" class="card">
+          <strong>Why choose us</strong>
+          <div class="features" style="margin-top:12px">
+            <div class="feature"><strong>Certified Organic</strong><div style="font-size:13px;color:var(--muted)">No synthetic pesticides or fertilizers</div></div>
+            <div class="feature"><strong>Sustainable Methods</strong><div style="font-size:13px;color:var(--muted)">Soil-first approach &amp; water conservation</div></div>
+            <div class="feature"><strong>Local Supply</strong><div style="font-size:13px;color:var(--muted)">Fresh deliveries to nearby towns</div></div>
+          </div>
+        </div>
+      </div>
+
+      <aside class="card" aria-label="Farm snapshot">
+        <img class="farm-photo" src="/websitephoto/company logo.jpeg" alt="fields and crops">
+        <div style="margin-top:12px">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <div>
+              <div style="font-weight:700">Fresh Harvests</div>
+              <div style="font-size:13px;color:var(--muted)">Seasonal vegetables & herbs</div>
+            </div>
+            <div style="text-align:right">
+              <div style="font-weight:700">+91 9970223282, 9130901331</div>
+              <div style="font-size:12px;color:var(--muted)">Email: bandumamanspc2310@gmail.com</div>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section id="products" style="max-width:1200px;margin:0 auto;padding:14px 28px">
+      <h2>Products</h2>
+      <p style="color:var(--muted);margin-top:6px">Small-batch organic produce — available by weekly subscription or single orders.</p>
+      <div class="grid-products" style="margin-top:12px">
+        <div class="card">
+          <h3>Seasonal Vegetables</h3>
+          <p style="color:var(--muted);font-size:14px">Tomatoes, brinjals, okra, leafy greens and more.</p>
+        </div>
+        <div class="card">
+          <h3>Herbs & Spices</h3>
+          <p style="color:var(--muted);font-size:14px">Coriander, mint, turmeric, and traditional herbs.</p>
+        </div>
+        <div class="card">
+          <h3>Millets & Grains</h3>
+          <p style="color:var(--muted);font-size:14px">Finger millet, pearl millet — naturally processed.</p>
+        </div>
+        <div class="card">
+          <h3>Honey & Beehive Products</h3>
+          <p style="color:var(--muted);font-size:14px">Raw honey from our apiaries.</p>
+        </div>
+      </div>
+      
+    </section>
+
+    <section id="products" class="section">
+      <h2>Our Products</h2>
+  
+      <h3>🌱 Organic Fertilizers</h3>
+      <div class="products-grid">
+        <div class="product-card">
+          <h3>Vermicompost</h3>
+          <p><b>Type:</b> Organic Fertilizer</p>
+          <p><b>Benefits:</b> Improves soil fertility & microbial activity</p>
+          <p><b>Usage:</b> All crops</p>
+          <p><b>Packing:</b> 25kg</p>
+        </div>
+        <div class="product-card">
+          <h3>Neem Cake</h3>
+          <p><b>Type:</b> Organic Fertilizer</p>
+          <p><b>Benefits:</b> Controls nematodes, enriches soil</p>
+          <p><b>Usage:</b> Fruits, Vegetables</p>
+          <p><b>Packing:</b> 10kg / 25kg</p>
+        </div>
+      </div>
+  
+      <h3>🧪 Bio-Liquid Pesticides</h3>
+      <div class="products-grid">
+        <div class="product-card">
+          <h3>Neem Oil Extract</h3>
+          <p><b>Type:</b> Bio-Pesticide</p>
+          <p><b>Benefits:</b> Controls aphids, whiteflies</p>
+          <p><b>Usage:</b> Spray on crops</p>
+          <p><b>Packing:</b> 1L / 5L</p>
+        </div>
+        <div class="product-card">
+          <h3>Dashparni Ark</h3>
+          <p><b>Type:</b> Bio-Pesticide</p>
+          <p><b>Benefits:</b> Repels insects, eco-friendly</p>
+          <p><b>Usage:</b> Spray on vegetables, pulses</p>
+          <p><b>Packing:</b> 1L / 5L</p>
+        </div>
+      </div>
+  
+      <h3>🌿 Plant Growth Promoters</h3>
+      <div class="products-grid">
+        <div class="product-card">
+          <h3>Seaweed Extract</h3>
+          <p><b>Type:</b> Growth Promoter</p>
+          <p><b>Benefits:</b> Enhances root growth & yield</p>
+          <p><b>Usage:</b> Foliar spray / soil application</p>
+          <p><b>Packing:</b> 500ml / 1L</p>
+        </div>
+        <div class="product-card">
+          <h3>Humic Acid</h3>
+          <p><b>Type:</b> Growth Promoter</p>
+          <p><b>Benefits:</b> Improves nutrient uptake</p>
+          <p><b>Usage:</b> Soil conditioner</p>
+          <p><b>Packing:</b> 1L / 5L</p>
+        </div>
+      </div>
+  
+      <h3>🌍 Soil Conditioners</h3>
+      <div class="products-grid">
+        <div class="product-card">
+          <h3>Gypsum</h3>
+          <p><b>Type:</b> Soil Conditioner</p>
+          <p><b>Benefits:</b> Improves soil structure & reduces salinity</p>
+          <p><b>Usage:</b> All field crops</p>
+          <p><b>Packing:</b> 25kg / 50kg</p>
+        </div>
+      </div>
+  
+      <h3>⚡ Micronutrients</h3>
+      <div class="products-grid">
+        <div class="product-card">
+          <h3>Zinc Sulphate</h3>
+          <p><b>Type:</b> Micronutrient</p>
+          <p><b>Benefits:</b> Prevents zinc deficiency in crops</p>
+          <p><b>Usage:</b> Rice, Wheat, Maize</p>
+          <p><b>Packing:</b> 1kg / 5kg</p>
+        </div>
+        <div class="product-card">
+          <h3>Boron</h3>
+          <p><b>Type:</b> Micronutrient</p>
+          <p><b>Benefits:</b> Improves fruit setting & quality</p>
+          <p><b>Usage:</b> Fruits & Vegetables</p>
+          <p><b>Packing:</b> 500g / 1kg</p>
+        </div>
+      </div>
+  
+    </section>
+
+    <section id="gallery" style="max-width:1200px;margin:0 auto;padding:14px 28px">
+      <h2>Gallery</h2>
+      <div class="gallery" style="margin-top:10px">
+        <img src="/websitephoto/Screenshot 2025-09-21 164449.png" alt="field" style="width:100%;border-radius:8px">
+        <img src="/websitephoto/Screenshot 2025-09-21 164340.png" alt="vegetables" style="width:100%;border-radius:8px">
+        <img src="/websitephoto/Screenshot 2025-09-21 164325.png" alt="herbs" style="width:100%;border-radius:8px">
+      </div>
+    </section>
+
+    <section id="about" style="max-width:1200px;margin:0 auto;padding:14px 28px">
+      <h2>About Us</h2>
+      <p style="color:var(--muted)">Bandu Mama Naisargik Sheti is a family-run organic farm dedicated to healthy food and regenerative farming. We focus on soil health, crop diversity and supplying our community with honest produce.</p>
+      <ul style="color:var(--muted)">
+        <li>Established: 20XX</li>
+        <li>Location: Your district, State</li>
+        <li>Delivery: Weekly local deliveries & farmer's market stalls</li>
+      </ul>
+    </section>
+
+    <section id="contact" style="max-width:1200px;margin:0 auto;padding:14px 28px 80px">
+      <h2>Contact & Order</h2>
+      <div style="display:grid;grid-template-columns:1fr 420px;gap:18px">
+        <div class="card contact-form">
+          <p style="color:var(--muted)">Send us a message or place an order. This form is static — please email or call for faster response.</p>
+          <input type="text" placeholder="Your name" />
+          <input type="email" placeholder="Your email" />
+          <input type="text" placeholder="Phone (optional)" />
+          <textarea rows="4" placeholder="Message / Order details"></textarea>
+          <div style="display:flex;gap:10px">
+            <button class="btn btn-primary">Send Message</button>
+            <a class="btn btn-outline" href="mailto:bandumamanspc2310@gmail.com">Email Us</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Get in touch</h3>
+          <p style="margin:6px 0;color:var(--muted)"><strong>Phone:</strong> +91 9970223282</p>
+          <p style="margin:6px 0;color:var(--muted)"><strong>Email:</strong> bandumamanspc2310@gmail.com</p>
+          <p style="margin:6px 0;color:var(--muted)"><strong>Address:</strong> C/O.H.NO.117 WARUDI TQ.BADNAPUR DIST.JALNA Georai(Bazar) Badnapur Jalna MH 431202 IN</p>
+          <div style="margin-top:12px">
+            <strong>Subscribe</strong>
+            <p style="color:var(--muted);font-size:13px">Get weekly availability & offers</p>
+            <form onsubmit="event.preventDefault();alert('Subscribed (demo)')">
+              <input type="email" placeholder="Email address" required />
+              <div style="margin-top:8px"><button class="btn btn-primary">Subscribe</button></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div style="max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px">
+      <div>
+        <div style="font-weight:700">Bandu Mama Naisargik Sheti</div>
+        <div style="font-size:13px;color:#cbd5db;margin-top:6px">Cultivating health, soil & community.</div>
+      </div>
+      <div style="color:#cbd5db;font-size:13px">© <span id="year"></span> Bandu Mama Naisargik Sheti</div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // Smooth anchor scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();const t=document.querySelector(a.getAttribute('href'));if(t) t.scrollIntoView({behavior:'smooth',block:'start'});}));
+    const navToggle = document.getElementById('nav-toggle');
+const navLinks = document.getElementById('nav-links');
+
+navToggle.addEventListener('click', () => {
+  navLinks.classList.toggle('show');
+});
+
+  </script>
+
+  <!-- WhatsApp Floating Button -->
+<a href="https://wa.me/919130521331?text=Hello%20Bandu%20Mama,%20I%20want%20to%20place%20an%20order!" 
+   class="whatsapp-float" target="_blank" rel="noopener">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+</a>
+
+</body>
+</html>
